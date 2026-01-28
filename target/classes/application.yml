@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: simple-spring-app
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+dubbo:
+  application:
+    name: ollama-dubbo-provider
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: N/A
+  scan:
+    base-packages: com.example.dubbo
+
+ollama:
+  url: http://localhost:11434
+  model: qwen2.5:0.5b
+  timeout: 30000
